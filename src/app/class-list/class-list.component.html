@@ -1,0 +1,11 @@
+<div class="row">
+    <div class="col-xs-10">
+        <ul class="list-group">
+            <a 
+            class="list-group-item" 
+            style="cursor: pointer"
+            *ngFor="let singleClassList of classList"
+            > {{singleClassList.name}} ({{singleClassList.courseCode}} at {{singleClassList.time}}</a>
+        </ul>
+    </div>
+</div>
