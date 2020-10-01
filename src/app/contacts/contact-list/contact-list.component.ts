@@ -16,7 +16,7 @@ export class ContactListComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    // this.firstName = "Riley preator";
+    // this.firstName = "Riley Preator";
   }
 
 }
