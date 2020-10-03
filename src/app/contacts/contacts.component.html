@@ -11,13 +11,13 @@
         <!-- <li></li> -->
     <!-- </ul> -->
 <!-- </div> -->
-
+ 
 <div class="row">
     <div class="col-md-5">
-        <cms-contact-list></cms-contact-list>
-        <cms-class-list></cms-class-list>
+        <cms-contact-list (selectedContactEvent)="selectedContact = $event"></cms-contact-list>
+        <!-- <cms-class-list></cms-class-list> -->
     </div>
     <div class="col-md-4">
-        <cms-contact-detail></cms-contact-detail>
+        <cms-contact-detail [contact]="selectedContact" *ngIf="selectedContact"></cms-contact-detail>
     </div>
 </div>
