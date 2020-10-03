@@ -9,6 +9,11 @@ import { HeaderComponent } from './header/header.component';
 import { ContactDetailEditComponent } from './contacts/contact-detail/contact-detail-edit/contact-detail-edit.component';
 import { ClassListComponent } from './class-list/class-list.component';
 import { ContactItemComponent } from './contacts/contact-list/contact-item/contact-item.component';
+import { DocumentsComponent } from './documents/documents.component';
+import { DocumentListComponent } from './documents/document-list/document-list.component';
+import { DocumentItemComponent } from './documents/document-list/document-item/document-item.component';
+import { DocumentDetailComponent } from './documents/document-detail/document-detail.component';
+import { MessageItemComponent } from './messages/message-item/message-item.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +24,12 @@ import { ContactItemComponent } from './contacts/contact-list/contact-item/conta
     HeaderComponent,
     ContactDetailEditComponent,
     ClassListComponent,
-    ContactItemComponent
+    ContactItemComponent,
+    DocumentsComponent,
+    DocumentListComponent,
+    DocumentItemComponent,
+    DocumentDetailComponent,
+    MessageItemComponent
   ],
   imports: [
     BrowserModule
