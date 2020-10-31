@@ -1,22 +1,29 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Contact } from '../contact.model';
+import { ContactService } from '../contact.service';
 
 @Component({
   selector: 'cms-contact-list',
   templateUrl: './contact-list.component.html',
-  styleUrls: ['./contact-list.component.css']
+  styleUrls: ['./contact-list.component.css'],
 })
 export class ContactListComponent implements OnInit {
   //list of all contacts
-  contacts: Contact[] = [
-    new Contact("1", "R. Kent Hackson", "jacksonk@byuiedu", "208-496-3771", "https://web.byui.edu/Directory/Employee/jacksonk.jpg", null),
-    new Contact("2","Rex Barzee", "barzeer@byui.edu", "208-496-3768", "https://web.byui.edu/Directory/Employee/barzeer.jpg", null)
-  ]
+  contacts: Contact[] = [];
 
-  constructor() { }
+  constructor(private contactService: ContactService) { }
+
+  //Event emitter to pass the data to contact-detail is now done in the contact service
+
+  onSelected(contact: Contact) {
+    // this.selectedContactEvent.emit(contact);
+    this.contactService.contactSelectedEvent.emit(contact);
+  }
+
 
   ngOnInit(): void {
-    // this.firstName = "Riley Preator";
+    // this.firstName = "Riley preator";
+    this.contacts = this.contactService.getContacts();
   }
 
 }
